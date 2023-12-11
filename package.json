@@ -1,0 +1,21 @@
+{
+  "name": "dusk",
+  "version": "0.0.0",
+  "private": false,
+  "scripts": {
+    "dev": "vite dev --host",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "@sveltejs/kit": "^1.27.4",
+    "svelte": "^4.2.7",
+    "svelte-adapter-bun": "^0.5.1",
+    "vite": "5.0.7"
+  },
+  "type": "module",
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.0.16",
+    "@unocss/reset": "^0.58.0"
+  }
+}
