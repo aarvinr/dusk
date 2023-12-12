@@ -1,18 +1,17 @@
 <script>
+  import { page } from "$app/stores";
   import { pageTitle } from "$lib/globals";
 
-  pageTitle.set("Home");
+  pageTitle.set(new URL($page.url).pathname.replace("/", ""));
 </script>
 
 <main>
   <img src="/favicon.png" alt="Dusk Logo" />
-  <h1>One place to keep track<br />of your library.</h1>
-  <p>
-    Dusk is a webapp for cataloging your books, movies, games, music, & more.
-  </p>
+  <h1>We couldn't find that page.</h1>
+  <p>The link might be broken, or this page might have moved.</p>
   <div>
-    <a href="/signup">Get Started</a>
-    <a href="/login">Log In</a>
+    <a href="/">Go Back</a>
+    <a href="https://github.com/aarvinr/dusk/issues">File an Issue</a>
   </div>
 </main>
 
@@ -54,19 +53,21 @@
     text-decoration: none;
   }
 
-  div > a[href="/signup"] {
+  div > a[href="/"] {
     color: #000000;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 
-  div > a[href="/login"] {
-    color: #FFFFFF;
+  div > a[href="https://github.com/aarvinr/dusk/issues"]
+  {
+    color: #ffffff;
     background-color: #262626;
     border: 1px solid #404040;
     transition: background-color 0.2s;
   }
 
-  div > a[href="/login"]:hover {
+  div > a[href="https://github.com/aarvinr/dusk/issues"]:hover
+  {
     background-color: #404040;
   }
 </style>

@@ -1,6 +1,19 @@
 :root {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "Inter Variable", "system-ui", sans-serif;
   background-color: #000000;
   scroll-behavior: smooth;
+}
+
+*::selection {
+  color: #ffffff;
+  background-color: #171717;
+}
+
+a {
+  color: #3b82f6;
+}
+
+a:hover {
+  text-decoration: underline;
 }
