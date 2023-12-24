@@ -3,6 +3,38 @@
     <img src="/favicon.png" alt="Home" />
   </a>
   <div>
+    <a href="/app/home"
+      ><svg
+        class="outline"
+        data-slot="icon"
+        fill="none"
+        stroke-width="1.5"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+        ></path>
+      </svg><svg
+        class="solid"
+        data-slot="icon"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"
+        ></path>
+        <path
+          d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"
+        ></path>
+      </svg></a
+    >
     <a href="/app/books"
       ><svg
         class="outline"
@@ -195,30 +227,27 @@
 
 <style>
   aside {
-    width: fit-content;
-    height: 100vh;
+    width: 100vw;
+    height: fit-content;
+    top: calc(100vh - 72px);
     position: fixed;
     padding: 1rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
   }
 
   aside > a {
+    display: none;
     width: 2.5rem;
   }
 
   aside > div {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
-  }
-
-  aside > div:last-of-type {
-    gap: 0.2rem;
+    gap: 1rem;
   }
 
   div > a {
@@ -254,5 +283,29 @@
 
   a:hover > svg.solid {
     opacity: 100%;
+  }
+
+  @media (min-width: 768px) {
+    aside {
+      top: 0;
+      width: fit-content;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    aside > a {
+      display: block;
+    }
+
+    aside > div {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    aside > div:last-of-type {
+      gap: 0.2rem;
+    }
   }
 </style>
