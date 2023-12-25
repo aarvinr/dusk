@@ -3,4 +3,13 @@
 </script>
 
 <Sidebar />
-<slot />
+<main>
+  <slot />
+</main>
+
+<style>
+  main {
+    margin-left: 5rem;
+    padding: 1rem;
+  }
+</style>

@@ -1,9 +1,9 @@
 <aside>
-  <a href="/">
+  <a href="/app">
     <img src="/favicon.png" alt="Home" />
   </a>
   <div>
-    <a href="/app/home"
+    <a href="/app"
       ><svg
         class="outline"
         data-slot="icon"
@@ -304,7 +304,13 @@
       gap: 0.5rem;
     }
 
+    aside > div:first-of-type {
+      padding-top: 1rem;
+    }
+
     aside > div:last-of-type {
+      padding-top: 1rem;
+      border-top: solid 1px #525252;
       gap: 0.2rem;
     }
   }

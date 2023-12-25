@@ -1,7 +1,5 @@
-<main></main>
+<script>
+  import { pageTitle } from "$lib/globals";
 
-<style>
-  main {
-    margin-left: 5rem;
-  }
-</style>
+  pageTitle.set("Home");
+</script>
